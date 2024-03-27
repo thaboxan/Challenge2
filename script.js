@@ -8,7 +8,6 @@ function logCalc() {
   const isString = typeof calculated === "string";
   const calculatedAsNumber = isString ? parseInt(calculated) : calculated;
   calculated = calculatedAsNumber + 1;
-  console.log(calculated);
   return calculated;
 }
 
@@ -23,25 +22,25 @@ const calcUser = () => {
   }
 };
 
-function checkUser() {
+const checkUser = () => {
   if (user && state === "requesting") {
     console.log(`User: ${user} (${calculated})`);
   }
-}
+};
 
 // // Only allowed to change code above
 
-// checkUser()
-// calcUser()
+checkUser();
+calcUser();
 
-// checkUser()
-// calcUser()
+checkUser();
+calcUser();
 
-// checkUser()
-// calcUser()
+checkUser();
+calcUser();
 
-// checkUser()
-// calcUser()
+checkUser();
+calcUser();
 
-// checkUser()
-// calcUser()
+checkUser();
+calcUser();
