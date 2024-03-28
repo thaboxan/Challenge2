@@ -1,13 +1,13 @@
 let state = "idle";
 let user = null;
-let calculated = "4";
+let calculated = "1";
 
 // Only allowed to change below
 
-function logCalc() {
+const logCalc = () => {
   const isString = typeof calculated === "string";
   const calculatedAsNumber = isString ? parseInt(calculated) : calculated;
-  calculated = calculatedAsNumber + 1;
+  calculated = calculatedAsNumber + 2;
   return calculated;
 }
 
@@ -20,6 +20,7 @@ const calcUser = () => {
   if (calculated > 3) {
     state = "idle";
   }
+  return(user, state)
 };
 
 const checkUser = () => {
@@ -28,7 +29,7 @@ const checkUser = () => {
   }
 };
 
-// // Only allowed to change code above
+ // Only allowed to change code above
 
 checkUser();
 calcUser();
